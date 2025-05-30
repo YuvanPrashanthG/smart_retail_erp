@@ -1,6 +1,10 @@
 //packages
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+//theme
+import 'package:smart_retail_erp/app/theme/theme.dart';
+import 'package:smart_retail_erp/app/theme/theme_provider.dart';
+//supabase
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 //pages
@@ -17,12 +21,16 @@ Future<void> main() async {
   runApp(ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
+    final themeMode = ref.watch(themeProvider);
     return MaterialApp(
       title: 'Smart Retail ERP',
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: themeMode,
       home: AuthGate(),
     );
   }

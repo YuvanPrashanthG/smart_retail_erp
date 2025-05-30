@@ -3,18 +3,22 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'product_controller.dart';
 
 class ProductListPage extends ConsumerWidget {
+  const ProductListPage ({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final productListAsync = ref.watch(productListProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text("Products")),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          // TODO: navigate to add/edit page
-        },
-      ),
+      appBar: AppBar(
+        title: Text("Products"),
+        actions: [
+          Text("Add Product"),
+          IconButton(
+            icon: const Icon(Icons.add_circle),
+            onPressed: () {},
+            tooltip: "Add Data",
+          ),
+        ],),
       body: productListAsync.when(
         data: (products) => ListView.builder(
           itemCount: products.length,
