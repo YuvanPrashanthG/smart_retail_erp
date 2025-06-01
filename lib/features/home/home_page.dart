@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_retail_erp/core/widgets/sidebar.dart';
+import 'package:smart_retail_erp/features/Store/store_page.dart';
 import 'package:smart_retail_erp/features/product/product_list_page.dart';
 import 'package:smart_retail_erp/features/dashboard/dashboard_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       case 1:
         return const ProductListPage();
       case 2:
-        return const Center(child: Text("Store Page (Coming Soon)"));
+        return const StorePage();
       case 3:
         return const Center(child: Text("Visitor Page (Coming Soon)"));
       case 4:

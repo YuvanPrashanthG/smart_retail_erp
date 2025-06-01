@@ -3,6 +3,7 @@ class Product {
   final String name;
   final String description;
   final double price;
+  final int stock;
   final String? imageUrl;
 
   Product({
@@ -10,6 +11,7 @@ class Product {
     required this.name,
     required this.description,
     required this.price,
+    required this.stock,
     this.imageUrl,
   });
 
@@ -19,6 +21,7 @@ class Product {
       name: map['name'],
       description: map['description'],
       price: (map['price'] as num).toDouble(),
+      stock: map['stock'] != null ? map['stock'] as int : 0,
       imageUrl: map['image_url'],
     );
   }
@@ -28,6 +31,7 @@ class Product {
       'name': name,
       'description': description,
       'price': price,
+      'stock': stock,
       'image_url': imageUrl,
     };
   }

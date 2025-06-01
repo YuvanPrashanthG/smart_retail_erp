@@ -22,14 +22,16 @@ class DashboardPage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: [
-            Wrap(
-              spacing: 16,
-              runSpacing: 16,
-              children: [
-                _buildStatCard("Total Products", "120", Icons.shopping_bag, theme),
-                _buildStatCard("Total Sales", "\$8,750", Icons.attach_money, theme),
-                _buildStatCard("Total Users", "340", Icons.people, theme),
-              ],
+            Center(
+              child: Wrap(
+                spacing: 16,
+                runSpacing: 16,
+                children: [
+                  _buildStatCard("Total Products", "120", Icons.shopping_bag, theme),
+                  _buildStatCard("Total Sales", "\$8,750", Icons.attach_money, theme),
+                  _buildStatCard("Total Users", "340", Icons.people, theme),
+                ],
+              ),
             ),
             const SizedBox(height: 24),
             Text("Recent Activities", style: theme.textTheme.titleLarge),

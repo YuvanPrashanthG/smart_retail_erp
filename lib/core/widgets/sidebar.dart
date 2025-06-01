@@ -41,7 +41,8 @@ class Sidebar extends ConsumerWidget {
             icon: Icons.shopping_bag,
             label: 'Product',
             isSelected: selectedIndex == 1,
-            onTap: () => onItemSelected(1),
+            onTap: () => {
+              onItemSelected(1)},
             notificationCount: 2,
             color: iconColor,
             textColor: textColor,

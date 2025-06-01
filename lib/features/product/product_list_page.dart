@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:smart_retail_erp/features/product/add_product.dart';
+import 'package:smart_retail_erp/features/product/update_product.dart';
 import 'product_controller.dart';
 
 class ProductListPage extends ConsumerWidget {
-  const ProductListPage ({super.key});
+  const ProductListPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final productListAsync = ref.watch(productListProvider);
@@ -12,13 +14,16 @@ class ProductListPage extends ConsumerWidget {
       appBar: AppBar(
         title: Text("Products"),
         actions: [
-          Text("Add Product"),
-          IconButton(
+          TextButton.icon(
+            onPressed: () => showDialog(
+              context: context,
+              builder: (_) => const AddProductDialog(),
+            ),
             icon: const Icon(Icons.add_circle),
-            onPressed: () {},
-            tooltip: "Add Data",
+            label: const Text("Add Product"),
           ),
-        ],),
+        ],
+      ),
       body: productListAsync.when(
         data: (products) => ListView.builder(
           itemCount: products.length,
@@ -26,19 +31,37 @@ class ProductListPage extends ConsumerWidget {
             final product = products[index];
             return ListTile(
               title: Text(product.name),
-              subtitle: Text("\$${product.price.toStringAsFixed(2)}"),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("\$${product.price.toStringAsFixed(2)}"),
+                  Text("Stock: ${product.stock}"),
+                ],
+              ),
+              leading: Stack(
+                alignment: Alignment.topRight,
+                children: [
+                  const Icon(Icons.shopping_bag, size: 32),
+                  if (product.stock < 3)
+                    const CircleAvatar(
+                      radius: 5,
+                      backgroundColor: Colors.red,
+                    ),
+                ],
+              ),
               trailing: IconButton(
-                icon: Icon(Icons.delete),
-                onPressed: () async {
-                  await ref.read(productRepoProvider).deleteProduct(product.id);
-                  // ignore: unused_result
-                  ref.refresh(productListProvider);
+                icon: const Icon(Icons.edit_note),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => UpdateProductDialog(product: product),
+                  );
                 },
               ),
             );
           },
         ),
-        loading: () => Center(child: CircularProgressIndicator()),
+        loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text("Error: $e")),
       ),
     );
