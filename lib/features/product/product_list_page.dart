@@ -34,7 +34,7 @@ class ProductListPage extends ConsumerWidget {
               subtitle: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("\$${product.price.toStringAsFixed(2)}"),
+                  Text("₹${product.price.toStringAsFixed(2)}"),
                   Text("Stock: ${product.stock}"),
                 ],
               ),

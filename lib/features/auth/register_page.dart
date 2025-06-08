@@ -41,7 +41,6 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
     final isLoading = authState is AsyncLoading;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF9FAFB),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24),

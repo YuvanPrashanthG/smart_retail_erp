@@ -42,7 +42,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     final isLoading = authState is AsyncLoading;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF9FAFB),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -63,7 +62,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12)),
                   filled: true,
-                  fillColor: Colors.white,
                 ),
               ),
               SizedBox(height: 16),
@@ -76,7 +74,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12)),
                   filled: true,
-                  fillColor: Colors.white,
                 ),
               ),
               SizedBox(height: 24),

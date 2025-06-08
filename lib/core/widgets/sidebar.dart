@@ -72,23 +72,6 @@ class Sidebar extends ConsumerWidget {
             textColor: textColor,
           ),
           SidebarItem(
-            icon: Icons.notifications,
-            label: 'Notification',
-            isSelected: selectedIndex == 5,
-            onTap: () => onItemSelected(5),
-            notificationCount: 11,
-            color: iconColor,
-            textColor: textColor,
-          ),
-          SidebarItem(
-            icon: Icons.headset_mic,
-            label: 'Help Center',
-            isSelected: selectedIndex == 6,
-            onTap: () => onItemSelected(6),
-            color: iconColor,
-            textColor: textColor,
-          ),
-          SidebarItem(
             icon: Icons.settings,
             label: 'Settings',
             isSelected: selectedIndex == 7,

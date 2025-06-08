@@ -61,7 +61,7 @@ class StorePage extends ConsumerWidget {
             final product = products[index];
             return ConstrainedBox(
               constraints: const BoxConstraints(
-                  minHeight: 400), // Set your desired min height
+                  minHeight: 400),
               child: Card(
                 elevation: 4,
                 child: Padding(
