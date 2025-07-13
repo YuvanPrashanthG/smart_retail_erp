@@ -26,24 +26,9 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 | Date Formatting   | `intl` package       |
 
 ---
-
 ## Project Structure
-'''
-lib/
-├── app/
-│ └── theme/ # Light and dark themes
-├── core/
-│ └── widgets/ # Reusable components (sidebar, buttons, etc.)
-├── data/
-│ ├── models/ # Product, CartItem, Bill models
-│ └── repositories/ # Supabase database interaction logic
-├── features/
-│ ├── auth/ # Login and registration UI
-│ ├── dashboard/ # Dashboard page and controller
-│ ├── product/ # Product listing, add/edit functionality
-│ └── store/ # Store cart, billing, and checkout logic
 
-'''
+<pre lang="markdown"> ## Project Structure ``` lib/ ├── app/ │ └── theme/ # Light and dark themes ├── core/ │ └── widgets/ # Reusable components (sidebar, buttons, etc.) ├── data/ │ ├── models/ # Product, CartItem, Bill models │ └── repositories/ # Supabase database interaction logic ├── features/ │ ├── auth/ # Login and registration UI │ ├── dashboard/ # Dashboard page and controller │ ├── product/ # Product listing, add/edit functionality │ └── store/ # Store cart, billing, and checkout logic ``` </pre>
 ---
 
 ## Supabase Tables
