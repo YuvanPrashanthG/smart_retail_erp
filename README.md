@@ -28,7 +28,7 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 ---
 
 ## Project Structure
-
+'''
 lib/
 ├── app/
 │ └── theme/ # Light and dark themes
@@ -43,10 +43,7 @@ lib/
 │ ├── product/ # Product listing, add/edit functionality
 │ └── store/ # Store cart, billing, and checkout logic
 
-yaml
-Copy
-Edit
-
+'''
 ---
 
 ## Supabase Tables
