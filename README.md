@@ -1,51 +1,55 @@
-# 🛍️ Smart Retail ERP
+# Smart Retail ERP
 
-A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for managing product inventory, billing, and sales with real-time dashboard insights — styled like an Amazon store interface.
-
----
-
-## 🚀 Features
-
-- 📦 **Product Management** – Add, view, update products with stock tracking and low-stock alerts
-- 🛒 **Store Page** – Scroll through products, add to cart, inspect and generate bills
-- 🧾 **Billing System** – Stores purchase history with bill ID and quantity details
-- 📊 **Dashboard Analytics** – View metrics like total products, stock, sales, and bills
-- 🌙 **Dark Mode** – Toggle between light/dark themes with Riverpod support
-- 🔁 **Real-Time Sync** – Pull-to-refresh updates using Supabase + Riverpod
+A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for managing product inventory, billing, and sales with real-time dashboard insights — styled with an intuitive, e-commerce-like interface.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-| Layer         | Technology           |
-|---------------|----------------------|
-| UI            | Flutter              |
-| Backend       | Supabase (PostgreSQL)|
-| State Mgmt    | Riverpod             |
-| Auth          | Supabase Auth        |
-| Date Format   | `intl` package       |
-
----
-
-## 📁 Project Structure
--lib/
--├── app/
--│ └── theme/ # Light and dark themes
--├── core/
--│ └── widgets/ # Reusable components (sidebar, buttons, etc.)
--├── data/
--│ ├── models/ # Product, CartItem, Bill models
--│ └── repositories/ # Supabase DB logic
--├── features/
--│ ├── auth/ # Login/Register UI
--│ ├── dashboard/ # Dashboard page + controller
--│ ├── product/ # Product listing, add/edit logic
--│ └── store/ # Store cart, billing, checkout logic
-
+- **Product Management** – Add, view, and update products with stock tracking and low-stock alerts  
+- **Store Page** – Scroll through products, add items to a cart, review cart contents, and generate bills  
+- **Billing System** – Records purchase history with bill ID, product details, and quantities  
+- **Dashboard Analytics** – Displays key metrics such as total products, current stock levels, total sales, and generated bills  
+- **Theme Support** – Toggle between light and dark modes using Riverpod  
+- **Real-Time Sync** – Pull-to-refresh updates using Supabase and Riverpod integration  
 
 ---
 
-## 📊 Supabase Tables
+## Tech Stack
+
+| Layer             | Technology           |
+|-------------------|----------------------|
+| UI                | Flutter              |
+| Backend           | Supabase (PostgreSQL)|
+| State Management  | Riverpod             |
+| Authentication    | Supabase Auth        |
+| Date Formatting   | `intl` package       |
+
+---
+
+## Project Structure
+
+lib/
+├── app/
+│ └── theme/ # Light and dark themes
+├── core/
+│ └── widgets/ # Reusable components (sidebar, buttons, etc.)
+├── data/
+│ ├── models/ # Product, CartItem, Bill models
+│ └── repositories/ # Supabase database interaction logic
+├── features/
+│ ├── auth/ # Login and registration UI
+│ ├── dashboard/ # Dashboard page and controller
+│ ├── product/ # Product listing, add/edit functionality
+│ └── store/ # Store cart, billing, and checkout logic
+
+yaml
+Copy
+Edit
+
+---
+
+## Supabase Tables
 
 ### `products`
 - `id`, `name`, `price`, `stock`, `created_at`
@@ -54,29 +58,25 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 - `bill_id`, `total`, `date`
 
 ### `purchase_history`
-- `id`, `bill_id` (FK), `product_id` (FK), `quantity`, `price`, `total`, `date`
+- `id`, `bill_id` (foreign key), `product_id` (foreign key), `quantity`, `price`, `total`, `date`
 
 ---
 
-## 📸 UI Previews
+## UI Previews
 
-### 🔐 Authentication
+### Authentication
 
 | Login Page | Register Page | Dark Mode |
 |------------|---------------|-----------|
 | ![](assets/screenshots/mobile%20login%20pg.png) | ![](assets/screenshots/mobile%20register%20pg.png) | ![](assets/screenshots/darkmode.png) |
 
----
-
-### 📦 Product Management
+### Product Management
 
 | Product List (Mobile) | Inventory Page (Mobile) | Product List (Web) | Inventory (Web) |
 |------------------------|--------------------------|---------------------|------------------|
 | ![](assets/screenshots/mobile%20product%20list%20pg.png) | ![](assets/screenshots/mobile%20inventory%20pg.png) | ![](assets/screenshots/web%20product%20list.png) | ![](assets/screenshots/web%20inventory.png) |
 
----
-
-### 📊 Dashboard
+### Dashboard
 
 | Mobile Dashboard | Web Dashboard |
 |------------------|----------------|
@@ -84,12 +84,9 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 
 ---
 
-## 🧠 Future Enhancements
+## Future Enhancements
 
-- 🧾 Export printable bills as PDF
-- 🛂 Role-based access (Admin vs Staff)
-- 📈 Charts with filters (monthly/yearly)
-- 🔌 Offline cart support
-
----
-
+- Generate and export printable bills as PDF  
+- Role-based access control (Admin and Staff)  
+- Interactive charts with monthly and yearly filters  
+- Offline cart support for enhanced reliability  
