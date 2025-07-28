@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:smart_retail_erp/features/analytics/widgets/sales_over_time_chart.dart';
 import 'dashboard_controller.dart';
 
 class DashboardPage extends ConsumerWidget {
@@ -28,6 +29,7 @@ class DashboardPage extends ConsumerWidget {
               _buildCard("Stock", dashboard.totalStock.toString()),
               _buildCard("Bills", dashboard.totalBills.toString()),
               _buildCard("Sales", "₹${dashboard.totalSales.toStringAsFixed(2)}"),
+              SalesOverTimeChart(),
             ][index];
           },
         ),

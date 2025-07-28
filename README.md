@@ -80,6 +80,12 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 <img src="assets/screenshots/web%20dashboard.png" width="600"/>
 
 ---
+### Anatytics 
+
+**Anatytics Dashboard**  
+<img src="assets/screenshots/mobile%20dashboard.png" width="300"/>
+
+---
 
 ## Future Enhancements
 

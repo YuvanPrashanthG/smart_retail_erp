@@ -82,12 +82,15 @@ class TopProductsChart extends ConsumerWidget {
                             getTitlesWidget: (value, meta) {
                               final index = value.toInt();
                               if (index < data.length) {
-                                return Transform.rotate(
-                                  angle: -0.6,
-                                  child: Text(
-                                    data[index].productName,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(fontSize: 10),
+                                return Padding(
+                                  padding: const EdgeInsets.only(top: 20),
+                                  child: Transform.rotate(
+                                    angle: -0.6,
+                                    child: Text(
+                                      data[index].productName,
+                                      textAlign: TextAlign.center,
+                                      style: const TextStyle(fontSize: 10),
+                                    ),
                                   ),
                                 );
                               }
@@ -103,7 +106,6 @@ class TopProductsChart extends ConsumerWidget {
                               return Text('${value.toInt()}');
                             },
                           ),
-                          axisNameWidget: const Text("Quantity"),
                         ),
                         topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
                         rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
