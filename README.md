@@ -45,39 +45,39 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 ### Authentication
 
 **Login Page**  
-![Login Page](assets/screenshots/mobile%20login%20pg.png)
+<img src="assets/screenshots/mobile%20login%20pg.png" width="300"/>
 
 **Register Page**  
-![Register Page](assets/screenshots/mobile%20rigister%20pg.png)
+<img src="assets/screenshots/mobile%20register%20pg.png" width="300"/>
 
 **Dark Mode**  
-![Dark Mode](assets/screenshots/darkmode.png)
+<img src="assets/screenshots/darkmode.png" width="300"/>
 
 ---
 
 ### Product Management
 
 **Product List (Mobile)**  
-![Mobile Product List](assets/screenshots/mobile%20product%20list%20pg.png)
+<img src="assets/screenshots/mobile%20product%20list%20pg.png" width="300"/>
 
 **Inventory Page (Mobile)**  
-![Mobile Inventory](assets/screenshots/mobile%20inventory%20pg.png)
+<img src="assets/screenshots/mobile%20inventory%20pg.png" width="300"/>
 
 **Product List (Web)**  
-![Web Product List](assets/screenshots/web%20product%20list.png)
+<img src="assets/screenshots/web%20product%20list.png" width="600"/>
 
 **Inventory (Web)**  
-![Web Inventory](assets/screenshots/web%20invetory.png)
+<img src="assets/screenshots/web%20inventory.png" width="600"/>
 
 ---
 
 ### Dashboard
 
 **Mobile Dashboard**  
-![Mobile Dashboard](assets/screenshots/mobile%20dashboard.png)
+<img src="assets/screenshots/mobile%20dashboard.png" width="300"/>
 
 **Web Dashboard**  
-![Web Dashboard](assets/screenshots/web%20dashboard.png)
+<img src="assets/screenshots/web%20dashboard.png" width="600"/>
 
 ---
 
