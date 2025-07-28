@@ -48,7 +48,7 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 ![Login Page](assets/screenshots/mobile%20login%20pg.png)
 
 **Register Page**  
-![Register Page](assets/screenshots/mobile%20register%20pg.png)
+![Register Page](assets/screenshots/mobile%20rigister%20pg.png)
 
 **Dark Mode**  
 ![Dark Mode](assets/screenshots/darkmode.png)
