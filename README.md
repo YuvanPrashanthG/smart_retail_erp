@@ -67,7 +67,7 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 <img src="assets/screenshots/web%20product%20list.png" width="600"/>
 
 **Inventory (Web)**  
-<img src="assets/screenshots/web%20inventory.png" width="600"/>
+<img src="assets/screenshots/web%20invetory.png" width="600"/>
 
 ---
 
