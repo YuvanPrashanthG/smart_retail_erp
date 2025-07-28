@@ -48,10 +48,10 @@ A modern ERP system built using **Flutter**, **Supabase**, and **Riverpod** for 
 <img src="assets/screenshots/mobile%20login%20pg.png" width="300"/>
 
 **Register Page**  
-<img src="assets/screenshots/mobile%20register%20pg.png" width="300"/>
+<img src="assets/screenshots/mobile%20rigister%20pg.png" width="300"/>
 
 **Dark Mode**  
-<img src="assets/screenshots/darkmode.png" width="300"/>
+<img src="assets/screenshots/darkmode.png" width="600"/>
 
 ---
 
