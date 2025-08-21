@@ -35,8 +35,11 @@ class SalesOverTimeChart extends ConsumerWidget {
 
     return Card(
       elevation: 4,
-      margin: const EdgeInsets.symmetric(vertical: 12),
+
+
+
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: theme.cardColor,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: salesDataAsync.when(
